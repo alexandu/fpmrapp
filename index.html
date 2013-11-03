@@ -1,101 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Fundatia Principesa Margareta a Romaniei</title>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-<link rel="stylesheet" href="css/feedget.mobile.min.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-<script src="js/feedget-1.1.0-mobile.min.js"></script>
+		<title>FPMR</title>
 
-	<script type="text/javascript">				
-		$(function() {
-			$('.yourDiv1').feedget(
-				{ 
-					feed: 'http://www.centrulgeneratii.ro/feed/',
-					loadingImg: 'images/loading.gif',
-					facebook: false,
-					twitter: false,
-					images: true,
-					fulltext: true,
-					entries: 10
+		<link type="text/css" rel="stylesheet" href="css/layout.css" />
+		<link type="text/css" rel="stylesheet" href="source/jquery.mmenu.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script type="text/javascript" src="source/jquery.mmenu.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var $menu = $('nav#menu'),
+					$html = $('html');
+
+				$('#themes a').click(function() {
+					$menu[ this.className == 'light' ? 'addClass' : 'removeClass' ]( 'mm-light' );
+					$html.removeAttr( 'class' );
+					$html.addClass( this.className == 'light' ? 'mm-light' : this.className );
 				});
-		});		
-		
-		$(function() {
-			$('.yourDiv2').feedget(
-				{ 
-					feed: 'http://www.niciodatasingur.ro/feed/',
-					loadingImg: 'images/loading.gif',
-					facebook: false,
-					twitter: false,
-					images: true,
-					fulltext: true,
-					entries: 10
-				});
-		});	
-		
-		$(function() {
-			$('.yourDiv3').feedget(
-				{ 
-					feed: 'http://www.princeradublog.ro/feed/',
-					loadingImg: 'images/loading.gif',
-					facebook: false,
-					twitter: false,
-					images: true,
-					fulltext: true,
-					entries: 10
-				});
-		});				
-	</script>
 
-<style>
-/* Swipe works with mouse as well but often causes text selection. */
-#demo-page * {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-}
-/* Arrow only buttons in the header. */
-#demo-page .ui-header .ui-btn {
-	background: none;
-	border: none;
-	top: 9px;
-}
-#demo-page .ui-header .ui-btn-inner {
-	border: none;
-}
-/* Content styling. */
-dl { font-size: 1em; padding: 1em; }
-dt { font-size: 2em; font-weight: bold; }
-dt span { font-size: .5em; color: #777; margin-left: .5em; }
-dd { font-size: 1.25em;	margin: 1em 0 0; padding-bottom: 1em; border-bottom: 1px solid #eee; }
-.back-btn { float: right; margin: 0 2em 1em 0; }
-
-</style>
+				$menu.mmenu();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="page">
+			<div id="header">
+				<a href="#menu"></a>
+				FPMR
+			</div>
+			<div id="content">
 	
-
-</head>
-<body>
-
-<div data-role="page" id="intro" data-theme="b">
-    <div data-role="header" data-theme="b">
-        <center><a href="#intro"><img src="images/fpmr-logo.png" border="0"></a></center>
-        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-btn-left ui-btn ui-btn-corner-all ui-btn-icon-notext ui-btn-up-c" data-corners="true" data-wrapperels="span" data-theme="c" title="Menu"><span class="ui-btn-inner"><span class="ui-btn-text">Menu</span><span class="ui-icon ui-icon-bars">&nbsp;</span></span></a>
-    </div><!-- /header -->
-    
-    <div data-role="content">
-        <dl>
-        
-            <dt>
-Fundatia Principesa Margareta a Romaniei (FPMR)
-            </dt>
-            
-            <dd>
+			
+<b>Fundatia Principesa Margareta a Romaniei (FPMR)</b>
+<br>
+<br>
 Fundatia Principesa Margareta a Romaniei este una din organizatiile neguvernamentale de elita care contribuie la dezvoltarea societatii civile din Romania. 
 <br>
 <br>
@@ -111,136 +52,20 @@ De-a lungul celor douazeci de ani de activitate, Fundatia a dezvoltat numeroase 
 In prezent, Fundatia Principesa Margareta a Romaniei (FPMR) dezvolta si sustine programe care:
 imbunatatesc conditiile de viata ale copiilor, varstnicilor, tinerilor si familiilor din comunitati defavorizate
 stimuleaza solidaritatea intre generatii si creaza o punte de comunicare intre copii, tineri si varstnici
-incurajeaza talentul tinerilor talentati         
-            </dd>
-            
-        </dl>
+incurajeaza talentul tinerilor talentati 			
+			
+			
 
-    </div><!-- /content -->
-    
-    <!-- panel -->
-    <div data-role="panel" id="left-panel" data-theme="b">
-    
-		    
-    
-		<ul data-role="listview" data-inset="true" data-theme="b">
-			<li data-role="list-divider" data-theme="a">Activitati si evenimente</li>
-			<li><a href="#centrul-generatii" rel="external">Centrul generatii</a></li>
-			<li><a href="#niciodata-singur" rel="external">Niciodata singur</a></li>
-			<li><a href="#romania-altfel" rel="external">Romania, altfel</a></li>
-		</ul>    
-		
-		
-		<br>
-        <br>
-        <br>
-        <br>
-        
-        <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-    </div>
-    <!-- /panel -->
-</div>
-
-
-
-
-
-<div data-role="page" id="centrul-generatii" data-theme="c">
-    <div data-role="header" data-theme="b">
-        <center><a href="#intro"><img src="images/fpmr-logo.png" border="0"></a></center>
-        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-btn-left ui-btn ui-btn-corner-all ui-btn-icon-notext ui-btn-up-c" data-corners="true" data-wrapperels="span" data-theme="c" title="Menu"><span class="ui-btn-inner"><span class="ui-btn-text">Menu</span><span class="ui-icon ui-icon-bars">&nbsp;</span></span></a>
-    </div><!-- /header -->
-    
-
-	<div class="yourDiv1" style="overflow:hidden;" data-role="content"></div>
-	
-    <!-- panel -->
-    <div data-role="panel" id="left-panel" data-theme="c">
-    
-		    
-    
-		<ul data-role="listview" data-inset="true" data-theme="b">
-			<li data-role="list-divider" data-theme="a">Activitati si evenimente</li>
-			<li><a href="#centrul-generatii" rel="external">Centrul generatii</a></li>
-			<li><a href="#niciodata-singur" rel="external">Niciodata singur</a></li>
-			<li><a href="#romania-altfel" rel="external">Romania, altfel</a></li>
-		</ul>    
-		
-		
-		<br>
-        <br>
-        <br>
-        <br>
-        
-        <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-    </div>
-    <!-- /panel -->    
-
-</div>
-
-
-<div data-role="page" id="niciodata-singur" data-theme="c">
-    <div data-role="header" data-theme="b">
-        <center><a href="#intro"><img src="images/fpmr-logo.png" border="0"></a></center>
-        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-btn-left ui-btn ui-btn-corner-all ui-btn-icon-notext ui-btn-up-c" data-corners="true" data-wrapperels="span" data-theme="c" title="Menu"><span class="ui-btn-inner"><span class="ui-btn-text">Menu</span><span class="ui-icon ui-icon-bars">&nbsp;</span></span></a>
-    </div><!-- /header -->
-    
-
-	<div class="yourDiv2" style="overflow:hidden;" data-role="content"></div>
-	
-    <!-- panel -->
-    <div data-role="panel" id="left-panel" data-theme="c">
-    
-		    
-    
-		<ul data-role="listview" data-inset="true" data-theme="b">
-			<li data-role="list-divider" data-theme="a">Activitati si evenimente</li>
-			<li><a href="#centrul-generatii" rel="external">Centrul generatii</a></li>
-			<li><a href="#niciodata-singur" rel="external">Niciodata singur</a></li>
-			<li><a href="#romania-altfel" rel="external">Romania, altfel</a></li>
-		</ul>    
-		
-		
-		<br>
-        <br>
-        <br>
-        <br>
-        
-        <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-    </div>
-    <!-- /panel -->    
-
-</div>
-
-
-
-<div data-role="page" id="romania-altfel" data-theme="c">
-    <div data-role="header" data-theme="b">
-        <center><a href="#intro"><img src="images/fpmr-logo.png" border="0"></a></center>
-        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-btn-left ui-btn ui-btn-corner-all ui-btn-icon-notext ui-btn-up-c" data-corners="true" data-wrapperels="span" data-theme="c" title="Menu"><span class="ui-btn-inner"><span class="ui-btn-text">Menu</span><span class="ui-icon ui-icon-bars">&nbsp;</span></span></a>
-    </div><!-- /header -->
-
-	<div class="yourDiv3" style="overflow:hidden;" data-role="content"></div>
-	
-    <!-- panel -->
-    <div data-role="panel" id="left-panel" data-theme="c">
-    
-		    
-    
-		<ul data-role="listview" data-inset="true" data-theme="b">
-			<li data-role="list-divider" data-theme="a">Activitati si evenimente</li>
-			<li><a href="#centrul-generatii" rel="external">Centrul generatii</a></li>
-			<li><a href="#niciodata-singur" rel="external">Niciodata singur</a></li>
-			<li><a href="#romania-altfel" rel="external">Romania, altfel</a></li>
-		</ul>    
-		<br>
-        <br>
-        <br>
-        <br>
-        <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-    </div>
-    <!-- /panel -->    
-</div>
-
-</body>
+			</div>
+			<nav id="menu">
+				<ul>
+					<li class="Selected"><a href="index.html">Prima pagina</a></li>
+					<li><a href="centrul-generatii.html">Centrul generatii</a></li>
+					<li><a href="niciodata-singur.html">Niciodata singur</a></li>
+					<li><a href="romania-altfel.html">Romania, altfel</a></li>
+					<li><a href="colors.html">Setari</a></li>
+				</ul>
+			</nav>
+		</div>
+	</body>
 </html>
