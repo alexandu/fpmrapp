@@ -1,65 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
-		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
-		<title>FPMR</title>
+	<title>FPMR</title>
 
-		<link type="text/css" rel="stylesheet" href="css/layout.css" />
-		<link type="text/css" rel="stylesheet" href="source/jquery.mmenu.css" />
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script type="text/javascript" src="source/jquery.mmenu.js"></script>
-		<script type="text/javascript">
-			$(function() {
-				var $menu = $('nav#menu'),
-					$html = $('html');
+	<link type="text/css" rel="stylesheet" href="css/layout.css" />
+	<link type="text/css" rel="stylesheet" href="source/jquery.mmenu.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script type="text/javascript" src="source/jquery.mmenu.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var $menu = $('nav#menu'),
+				$html = $('html');
 
-				$('#themes a').click(function() {
-					$menu[ this.className == 'light' ? 'addClass' : 'removeClass' ]( 'mm-light' );
-					$html.removeAttr( 'class' );
-					$html.addClass( this.className == 'light' ? 'mm-light' : this.className );
-				});
-
-				$menu.mmenu();
+			$('#themes a').click(function() {
+				$menu[ this.className == 'light' ? 'addClass' : 'removeClass' ]( 'mm-light' );
+				$html.removeAttr( 'class' );
+				$html.addClass( this.className == 'light' ? 'mm-light' : this.className );
 			});
-		</script>
-		
-		
-		<style type="text/css">
-		h3
-		{ 
-			font-size: 14px;
-			color: #330;
-			
-			font-weight: lighter; 
-		}
-		
-		ul
-		{
-		list-style-type: none;
-		padding: 0px;
-		margin: 0px;
-		}
-		ul li
-		{
-		background-repeat: no-repeat;
-		background-position: 0px 5px; 
-		padding-left: 14px; 
-		}
-		
-		li:first-child
-		{
-		display: none;
-		}
-	
-		</style>		
-		
-		
 
-<link rel="stylesheet" href="css/feedget.mobile.min.css" />
-<script src="js/feedget-1.1.0-mobile.min.js"></script>
-
+			$menu.mmenu();
+		});
+	</script>
+		
+    <link rel="stylesheet" href="css/fpmr.css" />
+	<link rel="stylesheet" href="css/feedget.mobile.min.css" />
+	<script src="js/feedget-1.1.0-mobile.min.js"></script>
 
 	<script type="text/javascript">				
 		$(function() {
@@ -80,7 +48,8 @@
 	<body>
 		<div id="page">
 			<div id="header">
-				<a href="#menu"><img src="images/fpmr.png" border="0"></a>
+				<a href="#menu"></a><img src="images/fpmrlogo.png" border="0" class="logo">
+				
 			</div>
 			<div id="content">
 			
@@ -93,9 +62,10 @@
 				<ul>
 					<li></li>
 					<li><a href="index.html">Prima pagina</a></li>
-					<li class="Selected"><a href="centrul-generatii.html">Centrul generatii</a></li>
+					<li class="Selected"><a href="centrul-generatii.html">Centrul Generatii</a></li>
 					<li><a href="niciodata-singur.html">Niciodata singur</a></li>
-					<li><a href="colors.html">Setari</a></li>
+					<li><a href="romania-altfel.html">HRH Prince Radu's Blog</a></li>
+					<li><a href="donatii-online.html">Donatii online</a><li>
 				</ul>
 			</nav>
 		</div>
